@@ -1,6 +1,6 @@
 name: Binary Release
 
-on: 
+on:
   release:
     types: [created]
 
@@ -20,3 +20,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
+        sha256sum: true
